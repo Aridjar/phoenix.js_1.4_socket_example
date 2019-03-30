@@ -1,0 +1,16 @@
+<table>
+  <tr>
+    <th>id</th>
+    <th>nom</th>
+    <th>sub</th>
+    <th>message</th>
+    <th>action</th>
+  </tr>
+  <tr *ngFor="let container of containers">
+    <td>{{ container.id }}</td>
+    <td>{{ container.name }}</td>
+    <td>{{ container.subscribed ? 'oui' : 'non' }}</td>
+    <td>{{ container.message?.counter }}</td>
+    <td><button (click)="select_container(container)">open container</button></td>
+  </tr>
+</table>

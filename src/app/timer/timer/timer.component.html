@@ -1,0 +1,7 @@
+<div *ngIf="container">
+  <h2>{{ container.name }} - {{ container.id }}</h2>
+  <p>{{ container.subscribed ? "subscribed" : "not subscribed" }}</p>
+  <button (click)="subscribe(container.name)" *ngIf="!container.subscribed">Sub !!</button>
+  <button (click)="unsubscribe(container.name)" *ngIf="container.subscribed">Unsub !!</button>
+  <button (click)="stop(container.name)">stop</button>
+</div>
